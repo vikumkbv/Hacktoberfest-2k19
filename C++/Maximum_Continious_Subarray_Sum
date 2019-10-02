@@ -1,0 +1,26 @@
+/*Given an array of size N, find maximum contiguous subarray sum */
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	int N;
+	cin>>N;
+	int arr[N];
+	for(int i=0;i<N;i++)
+	    cin>>arr[i];
+	
+	int max_sum=INT_MIN;
+	int max_ending =0;
+	
+	for(int i=0;i<N;i++)
+	{
+	    max_ending = max_ending + arr[i];
+	    if(max_ending>max_sum)
+	    max_sum = max_ending;
+	    
+	    if(max_ending <=0)
+	    max_ending =0;
+	}
+	cout<<max_sum;
+}
