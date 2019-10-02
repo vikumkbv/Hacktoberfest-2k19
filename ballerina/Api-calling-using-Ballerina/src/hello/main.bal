@@ -109,7 +109,7 @@ public function main() {
 
     //pastebin api call
     io:println("\nPasting to pastebin...");
-    var api_dev_key 			= "4770b41f81f3651900655af307b53940";
+    var api_dev_key 			= "xxxx";
     var api_paste_code 		    = text;
     var api_paste_private 		= "2"; 
     var api_paste_name			= "Bal";
