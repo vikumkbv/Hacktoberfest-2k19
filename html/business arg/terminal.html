@@ -1,0 +1,54 @@
+--<html> 
+<head> 
+<title>Untitled HTML Project Thing with Story</title>
+<style type="text/css">
+    
+    body {
+        font-size: 60px;
+        font-family: monospace;
+        background-color: black;
+        color: forestgreen;
+    }
+    
+    .typed-cursor {
+        opacity: 1;
+        -webkit-animation: blink 0.7s infinite;
+        -moz-animation: blink 0.7s infinite;
+        animation: blink 0.7s infinite;
+    }
+    
+    @keyframes blink {
+        0% { opacity:1; }
+        50% { opacity:0; }
+        100% { opacity:1; }
+    }
+    
+    @-webkit-keyframes blink {
+        0% { opacity:1; }
+        50% { opacity:0; }
+        100% { opacity:1; }
+    }
+    
+    @-moz-keyframes blink {
+        0% { opacity:1; }
+        50% { opacity:0; }
+        100% { opacity:1; }
+    }
+    
+</style> 
+</head> 
+<body> 
+<script src="jquery-3.1.1.min.js"></script>
+<script src="typed.js"></script>
+<script>
+  $(function(){
+      $(".element").typed({
+        strings: ["can't stop. ^1000", "voices in my head. ^1000", "creeping on my back. ^1000", "trying to kill me. ^1000", "the pills. ^1000", "they did this to me. ^1000"],
+        typeSpeed: 0
+      });
+  });
+</script>
+<span class="element"></span>
+
+</body> 
+</html> 
