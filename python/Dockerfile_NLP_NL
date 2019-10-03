@@ -1,0 +1,39 @@
+#######################################################################################
+###### Dockerfile to compose all necessary libraries for Pattern analysis in NLP ######
+#######################################################################################
+
+FROM python:3.6-alpine
+
+COPY . /
+
+RUN apk --no-cache --update-cache add gcc gfortran python python-dev py-pip build-base wget freetype-dev libpng-dev openblas-dev
+RUN pip install numpy scipy
+
+RUN set -e; \
+        apk add --no-cache --virtual .build-deps \
+                gcc \
+                libc-dev \
+                linux-headers \
+                mariadb-dev \
+                python3-dev \
+                postgresql-dev \
+        ;
+
+RUN apk update && \
+    apk add --update git && \
+    apk add --update openssh &&\
+    pip install -r requirements.txt
+
+#    apk add --update libblas-dev &&\
+#    apk add --update liblapack-dev &&\
+
+RUN mkdir "/root/dependencies/"
+WORKDIR "/root/dependencies/"
+
+RUN git clone https://github.com/clips/pattern.git
+WORKDIR "/root/dependencies/pattern"
+
+RUN python setup.py install
+
+
+ENTRYPOINT ["python3"]
