@@ -2,9 +2,6 @@
 # Import `check_IPv4` function if integrating into another program.
 
 
-from math import sqrt
-
-
 def check_IPv4(val):
 	val_arr = val.split('.')
 	if len(val_arr) != 4:
