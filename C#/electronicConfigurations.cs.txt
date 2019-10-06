@@ -1,0 +1,60 @@
+class Program
+    {
+        static void Main(string[] args)
+        {
+            int[] num = { 2, 2, 6, 2, 6, 2, 10, 6, 2, 10, 6, 2, 14, 10, 6, 2, 14, 10, 6 };
+            string[] last = { "s", "s", "p", "s", "p", "s", "d", "p", "s", "d", "p", "s", "f", "d", "p", "s", "f", "d", "p" };
+
+            string[] spdf2 = { "1s", " 2s", " 2p", " 3s", " 3p", " 4s", " 3d", " 4p", " 5s", " 4d", " 5p", " 6s", " 3f", " 5d", " 6p", " 7s", " 5f", " 6d", " 7p" };
+
+            int soma = 0;
+            string dist = "";
+
+            Console.WriteLine("Número atômico");
+            int z = int.Parse(Console.ReadLine());
+            int prot = z;
+            string ultimaC = "";
+            int fim = 0;
+
+            for (int i = 0; z > 0; i++)
+            {
+                z -= num[i];
+                if (z <= 0)
+                {
+                    fim = prot - soma;
+                    dist += (spdf2[i] + fim);
+                    ultimaC = last[i];
+                    break;
+                }
+                dist += spdf2[i] + num[i];
+                soma += num[i];
+            }
+            Console.WriteLine(dist);
+
+            if (ultimaC == "s")
+            {
+                if (fim == 1) { Console.WriteLine("Família dos Metais alcalinos"); }
+                else if (fim == 2) { Console.WriteLine("Família dos Metais alcalinos terrosos"); }
+            }
+            else if (ultimaC == "p")
+            {
+                if (fim == 1) { Console.WriteLine("Família do Boro"); }
+                else if (fim == 2) { Console.WriteLine("Família do Carbono"); }
+                else if (fim == 3) { Console.WriteLine("Família do Nitrogênio"); }
+                else if (fim == 4) { Console.WriteLine("Família dos Calcogênios"); }
+                else if (fim == 5) { Console.WriteLine("Família dos Halogênios"); }
+                else if (fim == 6) { Console.WriteLine("Família dos Gases nobres"); }
+            }
+            else if (ultimaC == "d")
+            {
+                if (fim < 8) { Console.WriteLine("Família metais de transição " + (fim + 2) + "B"); }
+                else if (fim > 8) { Console.WriteLine("Família dos metais de transição " + (fim - 8) + "B"); }
+            }
+            else if (ultimaC == "f")
+            {
+                if (prot >= 58 && prot <= 71) { Console.WriteLine("Família dos Latanídeos"); }
+                else if (prot >= 89 && prot <= 102) { Console.WriteLine("Família dos Actinídeos"); }
+            }
+            Console.ReadLine();
+        }
+    }
