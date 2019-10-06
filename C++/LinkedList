@@ -1,0 +1,217 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+const int null = 0;
+const string name_array[10] = { "A", "B", "C", "D", "E", "F", "G", "H", "I", "J" };
+
+struct info_type {
+	int matric;
+	std::string name;
+};
+
+struct node {
+	info_type* info;
+	struct node *prev, *next;
+};
+
+typedef struct node *nodeptr;
+nodeptr list = null, trav, temp;
+
+void menu();
+void push(node**,int,string);
+void append(node**,int,string);
+void insertBetween(node**,int,int,int,string);
+void printList();
+
+void main(){
+	for(int i=0;i<10;i++){
+		int d1 = i + 1;
+		std::string d2 = name_array[i];
+
+		//cout << "Enter matric number: ";
+		//cin >> d1;
+		//cout << "Enter name: ";
+		//cin >> d2;
+
+		//cin.clear();
+
+		append(&list, d1, d2);
+	}
+
+	system("CLS");
+	menu();
+}
+
+void menu(){
+MAIN:
+	system("CLS");
+	int i;
+
+	cout << "Choose an option" << endl;
+	cout << "1. Insert"<<endl;
+	cout << "2. Delete"<<endl;
+	cout << "3. Print"<<endl;
+
+	cin >> i;
+
+	switch(i){
+	case 1:{
+		system("CLS");
+		int a;
+		cout << "Choose an option" <<endl;
+		cout << "1. Insert front (push)"<<endl;
+		cout << "2. Insert rear (append)"<<endl;
+		cout << "3. Insert between"<<endl;
+
+		cin >> a;
+
+		switch(a){
+		case 1:{
+			int d1;
+			string d2;
+			cout << "Insert front (push)"<<endl<<endl;
+			cout << "Enter matric number: ";
+			cin >> d1;
+			cout << "Enter name: ";
+			cin >> d2;
+
+			push(&list,d1,d2);
+			goto MAIN;
+			break;
+			   }
+		case 2:{
+			int d1;
+			string d2;
+			cout << "Insert rear (append)"<<endl<<endl;
+			cout << "Enter matric number: ";
+			cin >> d1;
+			cout << "Enter name: ";
+			cin >> d2;
+
+			append(&list,d1,d2);
+			goto MAIN;
+			break;
+			   }
+		case 3:{
+			int d1,prev,next;
+			string d2;
+			cout << "Insert between"<<endl<<endl;
+			cout << "Enter matric number: ";
+			cin >> d1;
+			cout << "Enter name: ";
+			cin >> d2;
+
+			cout << endl << "Enter first matric number: ";
+			cin >> prev;
+			cout << "Enter second matric number: ";
+			cin >> next;
+
+			insertBetween(&list,prev,next,d1,d2);
+			system("PAUSE");
+			goto MAIN;
+			break;
+			   }
+		case 0:{
+			goto MAIN;
+			break;
+			   }
+		}
+		break;
+		   }
+	case 2:{
+		break;
+		   }
+	case 3:{
+		printList();
+		break;
+		   }
+	}
+}
+
+void printList(){
+	struct node* node = list;
+
+	while(node != null){
+		cout << "Matric Number: "<<node->info->matric << endl << "Name: "<<node->info->name << endl << endl;
+		node = node->next;
+	}
+}
+
+void push(struct node** head, int matric, std::string name){
+	struct info_type* info_temp = new (info_type);
+	info_temp->matric = matric;
+	info_temp->name = name;
+
+	temp = new (node);
+	temp->info = info_temp;
+	temp->next = (*head);
+	temp->prev = null;
+
+	if((*head) != null)
+		(*head)->prev = temp;
+
+	(*head) = temp;
+}
+
+void append(struct node** head, int matric, string name){
+	struct info_type* info_temp = new (info_type);
+	info_temp->matric = matric;
+	info_temp->name = name;
+
+	struct node* last = *head;
+
+	temp = new (node);
+	temp->info = info_temp;
+	temp->next = null;
+
+	if(*head == null){
+		temp->prev = null;
+		*head = temp;
+		return;
+	}
+
+	while(last->next != null)
+		last = last->next;
+
+	last->next = temp;
+	temp->prev = last;
+	return;
+}
+
+node* findNode(struct node* node, int matric){
+	trav = node;
+	while(trav != null){
+		if(trav->info->matric == matric){
+			return trav;
+		}
+		trav = trav->next;
+	}
+
+	return 0;
+}
+
+void insertBetween(struct node** head, int prev_matric, int next_matric, int matric, string name){
+	struct info_type* info_temp = new (info_type);
+	info_temp->matric = matric;
+	info_temp->name = name;
+
+	if(prev_matric == null || next_matric == null){
+		cout << "The given nodes cannot be empty"<<endl;
+		return;
+	}
+
+	struct node* prev = findNode(*head, prev_matric);
+	struct node* after = findNode(*head, next_matric);
+
+	cout << "Before: "<<prev->info->matric<<" After: "<<prev->next->info->matric<<endl;
+
+	temp = new (node);
+	temp->info = info_temp;
+	temp->next = prev->next;
+	temp->prev = after->prev;
+
+	prev->next = temp;
+	after->prev = temp;
+
+}
