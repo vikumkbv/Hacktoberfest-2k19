@@ -5,9 +5,7 @@
 :stars: :stars: :stars: :stars: :stars: :stars: :stars: :stars: :stars:
 
 [Hacktoberfest](https://hacktoberfest.digitalocean.com) is back again for this year. Go to its site and register first.
-@@ -22,4 +23,9 @@ You can send PRs throughout the month of October. Don't miss out...
-6. Send a PR.
-7. Done.
+You can send PRs throughout the month of October. Don't miss out...
 
 # :fire: :fire: :fire: :fire: :fire: :fire: :fire: :fire: :fire: :fire: :fire: :fire:
 
@@ -34,7 +32,7 @@
 16. POS hardware support
 17. Rest Api to connect with external 3rd party e-commerce vendors
 18. Backup to remote storage
-#UI should attractive and responsive(Material UI)
+# UI should attractive and responsive(Material UI)
 
 ### Hurry Up! Be the first one to start this project...
 
