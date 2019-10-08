@@ -4,7 +4,8 @@
 ## Phase 1 (Getting Familiar)
 :stars: :stars: :stars: :stars: :stars: :stars: :stars: :stars: :stars:
 
-[Hacktoberfest](https://hacktoberfest.digitalocean.com) is back again for this year. Go to its site and register first.
+[Hacktoberfest](https://hacktoberfest.digitalocean.com) is back again for this year. Go to this [Hacktoberfest](https://hacktoberfest.digitalocean.com) site and register first.
+Just add pull requests to this repo and stand a chance to win a limited edition Hacktoberfest T-shirt.
 You can send PRs throughout the month of October. Don't miss out...
 
 # :fire: :fire: :fire: :fire: :fire: :fire: :fire: :fire: :fire: :fire: :fire: :fire:
