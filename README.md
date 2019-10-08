@@ -4,7 +4,8 @@
 ## Phase 1 (Getting Familiar)
 :stars: :stars: :stars: :stars: :stars: :stars: :stars: :stars: :stars:
 
-[Hacktoberfest](https://hacktoberfest.digitalocean.com) is back again for this year. Go to this [Hacktoberfest](https://hacktoberfest.digitalocean.com) site and register first.
+[Hacktoberfest](https://hacktoberfest.digitalocean.com) is back again for this year. 
+Go to this [Hacktoberfest](https://hacktoberfest.digitalocean.com) site and register first.
 Just add pull requests to this repo and stand a chance to win a limited edition Hacktoberfest T-shirt.
 You can send PRs throughout the month of October. Don't miss out...
 
@@ -34,6 +35,8 @@ You can send PRs throughout the month of October. Don't miss out...
 17. Rest Api to connect with external 3rd party e-commerce vendors
 18. Backup to remote storage
 # UI should attractive and responsive(Material UI)
+
+start developing inside [Cloud-Base-POS-Syatem](https://github.com/vikumkbv/Hacktoberfest-2k19/tree/master/Cloud-Base-POS-Syatem) Folder
 
 ### Hurry Up! Be the first one to start this project...
 
