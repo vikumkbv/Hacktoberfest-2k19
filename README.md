@@ -1,11 +1,19 @@
 ## Hacktoberfest 2019 Special Announcement
 # :jack_o_lantern: :ghost: :fire: :fire:
 
+## Phase 1 (Getting Familiar)
 :stars: :stars: :stars: :stars: :stars: :stars: :stars: :stars: :stars:
 
 [Hacktoberfest](https://hacktoberfest.digitalocean.com) is back again for this year. Go to its site and register first.
+@@ -22,4 +23,9 @@ You can send PRs throughout the month of October. Don't miss out...
+6. Send a PR.
+7. Done.
 
-Contribute to this repo and stand a chance to win a limited edition Hacktoberfest T-shirt.
+# :fire: :fire: :fire: :fire: :fire: :fire: :fire: :fire: :fire: :fire: :fire: :fire:
+
+## Phase 2 - (Developing Cloud Base Point Of Sales System)
+:stars: :stars: :stars: :stars: :stars: :stars: :stars: :stars: :stars:
+### Requirements
 
 ## What you need to do?
 # Ongoing Project - Cloud Based POS system with following functionalities
@@ -45,4 +53,4 @@ You can send PRs throughout the month of October. Don't miss out...
 6. Send a PR.
 7. Done.
 
-#don't forget to give a star to original repo:stars:.
+# don't forget to give a star to original repo:stars:.
