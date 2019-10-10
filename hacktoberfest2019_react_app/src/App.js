@@ -6,9 +6,7 @@ function App() {
   return (
     <div className="demo-big-content">
         <Layout>
-            <Header title="Hacktoberfest React App" scroll>
-
-            </Header>
+            <Header title="Hacktoberfest React App" scroll />
             <Drawer title="Hacktoberfest React App">
             </Drawer>
             <Content>
