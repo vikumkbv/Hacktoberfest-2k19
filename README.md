@@ -24,19 +24,19 @@ You can send PRs throughout the month of October. Don't miss out...
 5. Email sending feature for invoice and quotations
 6. Recurring billing
 7. Platform independent
-9. User access management (Different privilages for admin, staff, manager etc)
-10. Loyalty programme (coupons, purchase base discounts)
-11. Print barcodes
-12. Search product by name, product id or barcode
-13. Offline working mode (when internet is available data should sync to the central db)
-14. Dashboard to veiw daily sales, inome, expenses, number of employee, etc
-15. Report Generation and email function (sales, tax, loyal members)
-16. POS hardware support
-17. Rest Api to connect with external 3rd party e-commerce vendors
-18. Backup to remote storage
+8. User access management (Different privileges for admin, staff, manager etc)
+9. Loyalty programme (coupons, purchase base discounts)
+10. Print barcodes
+11. Search product by name, product id or barcode
+12. Offline working mode (when internet is available data should sync to the central db)
+13. Dashboard to view daily sales, income, expenses, number of employees, etc
+14. Report Generation and email function (sales, tax, loyal members)
+15. POS hardware support
+16. Rest Api to connect with external 3rd party e-commerce vendors
+17. Backup to remote storage
 # UI should attractive and responsive(Material UI)
 
-start developing inside [Cloud-Base-POS-Syatem](https://github.com/vikumkbv/Hacktoberfest-2k19/tree/master/Cloud-Base-POS-Syatem) Folder
+Start developing inside [Cloud-Base-POS-System](https://github.com/vikumkbv/Hacktoberfest-2k19/tree/master/Cloud-Base-POS-System) Folder
 
 ### Hurry Up! Be the first one to start this project...
 
@@ -49,9 +49,9 @@ You can send PRs throughout the month of October. Don't miss out...
 
    `git clone https://github.com/<Your-Username>/Hacktoberfest-2k19.git`
 
-3. create folder from language you are going to contribute (ex: Java)
+3. Create folder from language you are going to contribute (ex: Java)
 4. then add your code inside it
-5. if the language has a folder already just add your code inside that folder
+5. If the language has a folder already just add your code inside that folder
 6. Send a PR.
 7. Done.
 
