@@ -4,5 +4,5 @@ def square_sum(n):
 		sum = sum + i*i
 	return sum
 
-x = int(input())
+x = int(input("Number: "))
 print(square_sum(x))
