@@ -3,18 +3,21 @@
 
 userInput = input("Enter a number or (q)uit: ")
 
-factorial = 1
+factorials = {0:1, 1:1}
+
+def factorialOf(num):
+    if num in factorials.keys():
+        return factorials[num]
+    else:
+        factorials[num] = factorialOf(num - 1) * num
+        return factorials[num]
 
 while userInput != "q":
 
     num = int(userInput)
     # check if the number is negative, positive or zero
     if num < 0:
-       print("Negative numbers don't have factorial!")
-    elif num == 0:
-       print("The factorial of 0 is 1")
+       print("ValueError: negative number given. Please enter a positive number.")
     else:
-       for i in range(1,num + 1):
-           factorial = factorial*i
-       print("The factorial of", num, "is", factorial)
-    userInput = input("Enter a number or (q)uit: ")
+       print("The factorial of {} is {}".format(num, factorialOf(num)))
+    userInput = input("Enter a positive number or (q)uit: ")
